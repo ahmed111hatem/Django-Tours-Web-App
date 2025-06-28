@@ -6,17 +6,13 @@ Features
 ✅ Contact form to send inquiries
 ✅ Organized Django project structure
 
-Tech Stack
-Python 3.12
-
-Django 5.x
-
+Tech Stack:
+Python 3.12, 
+Django 5.x, 
 HTML/CSS (templating)
 
-How to Run Locally
-bash
-Copy
-Edit
+How to Run Locally:
+
 git clone https://github.com/ahmed111hatem/Django-Tours-Web-App.git
 cd Django-Tours-Web-App
 
@@ -27,9 +23,6 @@ python manage.py migrate
 python manage.py runserver
 Then visit:
 
-cpp
-Copy
-Edit
 http://127.0.0.1:8000/
 Enjoy exploring tours!
 
