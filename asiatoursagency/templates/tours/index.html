@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asia Tours</title>
+  <link rel="stylesheet" href="{% static 'styles/main_style.css' %}">  
+</head>
+<body>
+  <h1>Welcome to my API 🌏</h1>
+  <h2>Schedule For 2025</h2>
+  <ul>
+    {% for tour in tours %}
+    <li>{{tour}}</li>
+    {% endfor %}
+  </ul>
+    <script src="{% static 'js/script.js' %}"></script>
+  <div class="centered-content">
+      <img class ="logo" src="{% static 'images/logo.jpeg' %}" alt="Django Logo">
+      <form action="{% url 'contact' %}" method="get">
+        <button type="submit" class="btn">Click To Enter The Form</button>
+      </form>
+  </div>
+</body>
+</html>
