@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Protected Page</h2>
+        <p>مرحبًا بك في الصفحة المحمية الخاصة بموقعنا!  
+    هنا تجد محتوى مميز متاح فقط للأعضاء المسجلين.  
+    استمتع بتصفح العروض الخاصة، والمعلومات الحصرية عن أفضل الوجهات السياحية حول العالم.  
+    نشكرك على كونك جزءًا من عائلتنا!</p>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+</body>
+</html>

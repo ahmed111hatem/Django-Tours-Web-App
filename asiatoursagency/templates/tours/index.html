@@ -4,23 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asia Tours</title>
-  <link rel="stylesheet" href="{% static 'styles/main_style.css' %}">  
+  <title>Asia Tours - Home</title>
+
+  <!-- CSS من الملفين -->
+  <link rel="stylesheet" href="{% static 'styles/main_style.css' %}">
 </head>
 <body>
-  <h1>Welcome to my API 🌏</h1>
-  <h2>Schedule For 2025</h2>
-  <ul>
-    {% for tour in tours %}
-    <li>{{tour}}</li>
-    {% endfor %}
-  </ul>
-    <script src="{% static 'js/script.js' %}"></script>
-  <div class="centered-content">
-      <img class ="logo" src="{% static 'images/logo.jpeg' %}" alt="Django Logo">
+  <div class="container">
+    <h1>Welcome to Asia Tours 🌏</h1>
+
+    <h2>Home</h2>
+    <p>Welcome, {{ request.user.username }}!</p>
+    <a href="{% url 'protected' %}">Go To Your Protected Page!</a>
+
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Logout</button>
+    </form>
+
+    <hr>
+
+    <h2>Schedule For 2025</h2>
+    <ul>
+      {% for tour in tours %}
+      <li>{{ tour }}</li>
+      {% empty %}
+      <li>No tours scheduled yet.</li>
+      {% endfor %}
+    </ul>
+
+    <div class="centered-content">
+
       <form action="{% url 'contact' %}" method="get">
         <button type="submit" class="btn">Click To Enter The Form</button>
       </form>
+    </div>
   </div>
+
 </body>
 </html>

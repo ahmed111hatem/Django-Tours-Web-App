@@ -14,7 +14,11 @@ HTML/CSS (templating)
 How to Run Locally:
 
 git clone https://github.com/ahmed111hatem/Django-Tours-Web-App.git
+<<<<<<< HEAD
  Django-Tours-Web-App
+=======
+cd Django-Tours-Web-App
+>>>>>>> d284bf4 (my updates)
 
 # Create and activate virtual environment if you wish
 pip install -r requirements.txt
